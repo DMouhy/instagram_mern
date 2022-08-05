@@ -1,0 +1,174 @@
+:root{
+    --mainColor: #262626;
+    --lightgrey: #fafafa;
+    --grey: rgb(75, 75, 75);
+    --borderColor: #cccbcb;
+    --lightBlue: #0095f6;
+    --logoFont: 'Grand Hotel', cursive;
+}
+
+body{
+    background: var(--lightgrey);
+}
+
+/* all Form & switcher */
+.logSign{
+    margin: auto;
+    padding: 120px 0 0 0;
+    max-width: 25%;
+    height: 90vh;
+}
+
+/* Form */
+.insta_logo{
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--mainColor);
+    font-family: var(--logoFont);
+}
+
+.message_error{
+    background: rgb(211, 7, 7);
+    color: white;
+    margin: 10px auto;
+    text-align: center;
+    border-radius: 5px;
+    width: 75%;
+    font-weight: 600;
+}
+
+.message_success{
+    background: rgb(14, 211, 7);
+    color: white;
+    margin: 10px auto;
+    text-align: center;
+    border-radius: 5px;
+    width: 75%;
+    font-weight: 600;
+}
+
+.FormContainer{
+    background: #fff;
+    border: 1px solid var(--borderColor);
+    width: 100%;
+    margin: 0 0 25px 0;
+    padding: 25px 0;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form input{
+    width: 70%;
+    padding: 6px;
+    margin: 6px 0;
+    background: var(--lightgrey);
+    border: solid 1px var(--borderColor);
+}
+
+form button{
+    width: 70%;
+    background: var(--lightBlue);
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 5px;
+    transition: all 0s;
+}
+.button_loading{
+    background: #74c7ff;
+    color: var(--lightgrey);
+    pointer-events: none;
+    transition: all 0s;
+}
+.hide{
+    display: none
+}
+
+form button:hover{
+    transition: all 0s;
+    background: #0e9cfa;
+    cursor: pointer;
+}
+form button:active{
+    transition: all 0s;
+    background: #0181d6;
+}
+
+/* form Switcher */
+.form_switcher{
+    background: #fff;
+    border: 1px solid var(--borderColor);
+    width: 100%;
+    margin: 25px 0;
+    padding: 18px;
+    text-align: center;
+}
+
+.form_switcher p{
+    color: rgb(116, 116, 116);
+    font-weight: 300;
+}
+.form_switcher span{
+    color: var(--lightBlue);
+    font-weight: 300;
+    text-decoration: underline;
+}
+.form_switcher span:hover{
+    cursor: pointer;
+    text-decoration: none;
+}
+.form_switcher span:active{
+    color: #026eb6;
+}
+
+/* Footer */
+footer{
+    border-top: var(--borderColor) solid 1px;
+    width: 100%;
+}
+footer ul{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+footer ul li{
+    margin: 0 1.5rem;
+}
+footer ul li a{
+    color: #00376b;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 14px;
+}
+footer ul li p{
+    color: gray;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Media */
+@media(max-width: 1200px){
+    .logSign{
+        max-width: 50%;
+    }
+}
+
+@media(max-width: 550px){
+    .logSign{
+        max-width: 100%;
+    }
+    footer ul li{
+        margin: 0 1rem;
+    }
+}

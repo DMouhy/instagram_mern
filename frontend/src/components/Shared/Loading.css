@@ -1,0 +1,29 @@
+:root{
+    --mainColor: #262626;
+    --lightgrey: #fafafa;
+    --grey: rgb(75, 75, 75);
+    --borderColor: #cccbcb;
+    --lightBlue: #0095f6;
+    --logoFont: 'Grand Hotel', cursive;
+}
+
+.insta_loading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: var(--borderColor);
+
+    animation: icon-rot .6s infinite ease-in-out ; 
+}
+
+@keyframes icon-rot{
+    0%{
+        transform: translateY(0);
+        transform: rotateZ(0);
+    }
+    100%{
+        transform: translateY(500px);
+        transform: rotateZ(360deg);
+    }
+}

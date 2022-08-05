@@ -1,0 +1,63 @@
+:root{
+    --mainColor: #262626;
+    --lightgrey: #fafafa;
+    --grey: rgb(75, 75, 75);
+    --borderColor: #cccbcb;
+    --lightBlue: #0095f6;
+    --avatar_dimension: 180px;
+}
+
+.no_following{
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 20%;
+    color: rgb(228, 226, 226);
+    z-index: 2;
+    letter-spacing: 5px;
+
+    -webkit-text-stroke: 2px var(--mainColor);
+}
+
+.users_list{
+    position: fixed;
+    top: 100px;
+    right: 50px;
+    background-color: whitesmoke;
+    padding: 25px 0;
+    width: 280px;
+    height: 500px;
+    box-shadow: -4px 6px 10px var(--mainColor);
+    border-radius: 10px;
+    border: 1px solid #969595;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.users_count{
+    text-align: center;
+    width: 45%;
+    margin: 10px auto;
+    transform: translateY(-10px);
+    background: linear-gradient(to right,  rgb(223, 12, 159), rgb(247, 185, 15) );
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
+
+.userCard{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    border-top: 1px solid var(--borderColor);
+    border-bottom: 1px solid var(--borderColor);
+    padding: 18px;
+}
+
+.userCard p{
+    color: var(--mainColor);
+    font-weight: 400;
+    margin-left: 10px;
+}

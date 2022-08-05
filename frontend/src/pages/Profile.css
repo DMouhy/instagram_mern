@@ -1,0 +1,228 @@
+:root{
+    --mainColor: #262626;
+    --lightgrey: #fafafa;
+    --grey: rgb(75, 75, 75);
+    --borderColor: #cccbcb;
+    --lightBlue: #0095f6;
+    --avatar_dimension: 180px;
+}
+
+.profile_header_flex{
+    display: flex;
+    margin: auto;
+    width: 65%;
+    height: 340px;
+    border-bottom: solid 1px var(--borderColor);
+}
+/* left header */
+.profile_header_flex .profile_avatar{
+    width: var(--avatar_dimension);
+    height: var(--avatar_dimension);
+    margin: 60px 60px;
+    cursor: pointer;
+}
+.default_avatar{
+    border: 4px solid var(--lightBlue);
+    transition: border .3s ease-in-out;
+}
+.default_avatar:hover{
+    border: 7px solid #6dc1fa;
+}
+.change_avatar{
+    pointer-events: none;
+}
+
+/* change Image profile */
+.hide_pic_modify{
+    display: none;
+    pointer-events: none;
+}
+.change_profile_pic{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 6;
+}
+.change_profile_pic .conatiner{
+    background-color: white;
+    width: 450px;
+    border-radius: 5px;
+    margin: 18% auto;
+    padding: 9px 0;
+    text-align: center;
+}
+.change_profile_pic .conatiner .insta_loading {
+    position: relative;
+    top: 0;
+    left: 0;
+    color: var(--mainColor);
+    font-size: 50px;
+    margin: 50px;
+}
+.change_profile_pic .conatiner p{
+    margin: 20px 0;
+}
+.change_profile_pic .conatiner p:nth-child(1){
+    color: var(--mainColor);
+    font-size: 21px;
+    font-weight: 500;
+}
+.change_profile_pic .conatiner p:nth-child(3){
+    border-top: 1px solid var(--borderColor);
+    color: #e9291b;
+    padding-top: 14px;
+    font-size: 19px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.change_profile_pic .conatiner p:nth-child(4){
+    border-top: 1px solid var(--borderColor);
+    color: var(--mainColor);
+    padding-top: 14px;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+}
+.change_profile_pic .conatiner label{
+    border-top: 1px solid var(--borderColor);
+    color: var(--lightBlue);
+    display: block;
+    padding-top: 14px;
+    font-size: 19px;
+    font-weight: 500;
+    cursor: pointer;
+}
+#import_image{
+    visibility: hidden;
+    display: none;
+}
+
+/* right header */
+.profile_data{
+    display: block;
+    margin: auto;
+    width: 45%;
+    font-size: 25px;
+    color: var(--mainColor);
+}
+
+.profile_data .username,
+.profile_data .full_name{
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.profile_data .ul_flex{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.profile_data .ul_flex li{
+    margin: 0 2px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.profile_data .ul_flex li span{
+    font-weight: 300;
+}
+.btns{
+    width: 100%;
+}
+.follow_btn{
+    background-color: var(--lightBlue);
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.follow_btn:hover{
+    transition: all 0.2s;
+    background: #1da5ff;
+    cursor: pointer;
+}
+
+.unfollow_btn{
+    background-color: #d31d10;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.unfollow_btn:hover{
+    transition: all 0.2s;
+    background: #e9291b;
+    cursor: pointer;
+}
+
+/* loading */
+.unfollow_btn .insta_loading,
+.follow_btn .insta_loading{
+    position: relative;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    color: white;
+    font-weight: 800;
+}
+
+/* posts */
+.profile_posts{
+    width: 65%;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.profile_posts .img_container{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    border: 1px solid var(--borderColor);
+}
+
+.img_container img{
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+}
+.show_likes_comments{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(38, 38, 38, 0.8);
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 8px;
+    text-align: center;
+    padding-top: 47%;
+    opacity: 0;
+
+    transition: all .5s;
+}
+
+.profile_posts .img_container:hover .show_likes_comments{
+    opacity: 1;
+    cursor: pointer;
+}

@@ -1,0 +1,55 @@
+:root{
+    --mainColor: #262626;
+    --lightgrey: #fafafa;
+    --grey: rgb(75, 75, 75);
+    --borderColor: #cccbcb;
+    --lightBlue: #0095f6;
+    --logoFont: 'Grand Hotel', cursive;
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 5;
+
+    background: white;
+    width: 100%;
+    border-bottom: 1px solid var(--borderColor);
+}
+
+.header_flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 65%;
+    height: 60px;
+    margin: auto;
+}
+
+.header_insta_logo a{
+    font-size: 40px;
+    /* font-weight: 800; */
+    text-align: start;
+    color: var(--mainColor);
+    font-family: var(--logoFont);
+    cursor: pointer;
+}
+
+.buttons button,
+.buttons a{
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: 25px;
+    color: var(--mainColor);
+    font-size: 25px;
+}
+
+.buttons button:first-child{
+    font-size: 30px;
+    margin-right: 3px;
+    margin-top: 5px;
+}

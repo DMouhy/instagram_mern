@@ -1,0 +1,146 @@
+:root{
+    --mainColor: #262626;
+    --lightgrey: #fafafa;
+    --grey: rgb(75, 75, 75);
+    --borderColor: #cccbcb;
+    --lightBlue: #0095f6;
+    --logoFont: 'Grand Hotel', cursive;
+}
+
+.post{
+    width: 650px;
+    border: solid 1px var(--borderColor);
+    margin: 50px 20%;
+}
+
+/* username */
+.post .post_username{
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    background-color: white;
+    border-bottom: 1px solid var(--borderColor);
+}
+
+.post .post_username .avatar{
+    width: 40px;
+    height: 40px;
+}
+.post .post_username a{
+    color: var(--mainColor);
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* post Image */
+.post_post_img{
+    width: 100%;
+}
+.post_post_img img{
+    object-fit: fill;
+    width: 100%;
+}
+
+/* Caption */
+.post .post_caption{
+    display: flex;
+    width: 100%;
+    background-color: white;
+    padding: 14px;
+    box-shadow: none;
+    border-top: 1px solid var(--borderColor);
+    border-bottom: 2px solid #a3a2a2;
+}
+.post .post_caption p{
+    color: var(--mainColor);
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.post .post_caption p:first-child{
+    font-weight: 500;
+}
+.post .post_caption p:last-child{
+    max-width: 530px;
+    word-wrap: break-word;
+}
+
+/* Comments */
+.post_comments{
+    max-height: 350px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.post_comments .comment_card{
+    display: flex;
+    padding: 12px;
+    background-color: white;
+    border-bottom: 1px solid var(--borderColor);
+    border-top: 1px solid var(--borderColor);
+}
+
+.post_comments .comment_card .avatar{
+    width: 35px;
+    height: 35px;
+}
+
+.post_comments .comment_card .caption_data{
+    margin-left: 15px;
+}
+
+.post_comments .comment_card a p:first-child{
+    font-weight: 500;
+    color: var(--mainColor);
+}
+
+.post_comments .comment_card p:last-child{
+    max-width: 530px;
+    word-wrap: break-word;
+}
+
+/* likes */
+.post_likes{
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 2.8rem;
+    padding: 10px;
+
+    transition: all 0s;
+}
+.post_likes .hearth{
+    font-size: 28px;
+    margin-left: 10px;
+    cursor: pointer;
+
+    transition: all 0s;
+}
+.post_likes .notliked{
+    color: rgb(182, 181, 181);
+}
+.post_likes .liked{
+    color: rgb(255, 15, 15);
+}
+.post_likes p{
+    color: var(--mainColor);
+    margin-left: 10px;
+}
+.post_likes p span{
+    font-weight: 600;
+}
+
+/* Add comment */
+.post_add_comment{
+    width: 100%;
+    height: 50px;
+}
+.post_add_comment input{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(238, 238, 238);
+    font-size: 15px;
+}
